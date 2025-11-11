@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# ChatSphere AI
+Welcome to **ChatSphere AI** — an intelligent, real-time chat and automation platform built to streamline communication, enhance collaboration, and integrate AI-powered assistance for teams and individuals.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+- [About the Project](#about-the-project)
+- [Features](#features)
+- [Folder Structure](#folder-structure)
+- [Technologies Used](#technologies-used)
+- [Setup Instructions](#setup-instructions)
+- [Environment Variables](#environment-variables)
+- [Usage](#usage)
+- [License](#license)
 
-## Available Scripts
+## About the Project
+**ChatSphere AI** is a modern chat and collaboration platform integrated with AI capabilities to assist users in managing conversations, automating replies, and improving productivity.
+It provides a secure, scalable, and responsive environment for both team and personal communication — powered by real-time data sync and intelligent AI features.
 
-In the project directory, you can run:
+### Key Objectives:
+- Simplify and accelerate real-time communication.
+- Enhance user productivity using AI-driven smart suggestions and automation.
+- Provide an intuitive and responsive user experience across devices.
+- Deliver a scalable solution for both individual and enterprise needs.
 
-### `npm start`
+## Features
+- 💬 **Real-time Chat System** – Send and receive messages instantly with live updates.
+- 🤖 **AI-Powered Assistance** – Get smart suggestions, summaries, and auto-replies powered by AI.
+- 🧑‍🤝‍🧑 **User Management** – Secure login, registration, and profile management.
+- 📂 **Conversation History** – Store and retrieve previous chat sessions easily.
+- 🔐 **Authentication & Security** – Secure user data with JWT and bcrypt encryption.
+- ⚙️ **Admin Panel** – Manage users, monitor activity, and configure system settings.
+- 📱 **Responsive Design** – Optimized for all screen sizes and devices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Folder Structure
+- **frontend/** – Contains the React-based user interface for ChatSphere AI.
+- **backend/** – Node.js + Express backend handling API requests, authentication, and database operations.
+- **config/** – Environment setup and configuration files.
+- **models/** – Database schemas and data models.
+- **controllers/** – API logic and request handlers.
+- **routes/** – API endpoint definitions.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+### Frontend
+- React.js
+- Tailwind CSS
+- Axios
+- React Router
+- Context API / Redux
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Backend
+- Node.js with Express.js
+- MongoDB (via Mongoose ORM)
+- JWT for authentication
+- bcrypt for password encryption
 
-### `npm run build`
+### AI Integration
+- OpenAI API / Custom NLP Model (depending on setup)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup Instructions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
+- MongoDB database running locally or on cloud (e.g., MongoDB Atlas)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Steps
 
-### `npm run eject`
+#### 1️⃣ Clone the Repository
+git clone https://github.com/imdsatyam/chatsphere-AI.git
+cd chatsphere-AI
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### 2️⃣ Setup Backend
+cd backend
+npm install
+npm run dev
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Your backend server will start on http://localhost:5000 by default.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### 3️⃣ Setup Frontend
+cd ../frontend
+npm install
+npm start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Your frontend will start on http://localhost:3000.
 
-## Learn More
+## Environment Variables
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Create a .env file in both frontend and backend directories.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Example for Backend
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/chatsphereAI
+JWT_SECRET=your-secret-key
+OPENAI_API_KEY=your-openai-api-key
 
-### Code Splitting
+### Example for Frontend
+REACT_APP_API_URL=http://localhost:5000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Usage
+1. Open the frontend at http://localhost:3000.
+2. Register or log in to your ChatSphere AI account.
+3. Start chatting, explore AI assistance, and manage conversations.
+4. Access admin controls (if enabled) for user and chat management.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+This project is licensed under the **MIT License** — free to use, modify, and distribute.
